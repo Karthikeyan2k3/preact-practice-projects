@@ -27,9 +27,10 @@ effect(()=>{
 
 function ClockComponent(){
     return (
-        <section>
-            <h2 style={"font-family: Arial"}>Digital Clock</h2>
-            <h1 style={'font-family : Arial;'}>{time.value}</h1>
+        <section style={"text-align: center; font-family: Arial;"}>
+            <hr />
+            <h2>Digital Clock</h2>
+            <h1>{time.value}</h1>
             <button onClick={()=> onTimer.value = !onTimer.value}>
                 {onTimer.value ? 'Stop' : 'Start'}
             </button>

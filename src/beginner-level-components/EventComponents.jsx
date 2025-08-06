@@ -11,21 +11,17 @@ const buttonClick=()=>{
 
 function EventComponent(){
   return(
-    <section>
-        <h2 style={"font-family: Arial;"}>Event Handling</h2>
-        <ul style={'font-family: Arial;'}>
-            <p>This section covers the below mentioned Event handlers </p>
-            <li>onInput</li>
-            <li>onClick</li>
-        </ul>
+    <section style={"text-align: center; font-family: Arial;"}>
+        <hr />
+        <h2>Event Handling</h2>
         <button onClick={buttonClick}>click me!</button>
         <p><em>Check the console for logs!</em></p>
-        <input onInput={(e)=> text.value=e.currentTarget.value} placeholder="Type something..."></input>
+        <input onInput={(e)=> text.value=e.currentTarget.value} id="text" placeholder="Type something..."></input>
         <p><em>{text.value}</em></p>
+        <input value={count.value} id="value" readOnly></input><br/>
         <button onClick={()=>count.value++}>Add+</button>
-        <input value={count.value} readOnly></input>
-        <button onClick={()=>count.value--}>Subtract-</button>
         <button onClick={()=>count.value=0}>Reset</button>
+        <button onClick={()=>count.value--}>Subtract-</button>
     </section>
   );
 }
